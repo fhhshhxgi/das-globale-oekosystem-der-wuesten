@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-sand-50: #fefdf8;
+  --color-sand-100: #fdfaf0;
+  --color-sand-200: #f9f1d5;
+  --color-sand-300: #f2e2ad;
+  --color-sand-400: #e7cc7d;
+  --color-sand-500: #d6af4f;
+  --color-sand-600: #bc9238;
+  --color-sand-700: #9c732b;
+  --color-sand-800: #7e5924;
+  --color-sand-900: #67471f;
+  --color-sand-950: #3b260f;
+  
+  --color-desert-night: #060a17;
+  --color-desert-night-card: #0e162f;
+}
+
+/* Custom glassmorphism styles */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.glass-panel-dark {
+  background: rgba(14, 22, 47, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-light {
+  background: rgba(255, 253, 240, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(156, 115, 43, 0.15);
+}
+
+/* Hitzeflimmern Animation */
+@keyframes heatDistortion {
+  0% {
+    filter: url(#heat-filter) skewX(0deg) scale(1);
+  }
+  50% {
+    filter: url(#heat-filter) skewX(0.5deg) scale(1.005);
+  }
+  100% {
+    filter: url(#heat-filter) skewX(-0.5deg) scale(1);
+  }
+}
+
+.heatwave-effect {
+  animation: heatDistortion 3s ease-in-out infinite alternate;
+}
+
+/* Scroll Snap styling if desired */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Energy flow march-ants line animation for FoodWeb */
+@keyframes dash {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+
+.animate-dash {
+  stroke-dasharray: 6, 4;
+  animation: dash 1.2s linear infinite;
+}
+

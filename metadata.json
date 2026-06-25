@@ -1,0 +1,6 @@
+{
+  "name": "Survive the Desert",
+  "description": "Interaktive Lernwelt und digitale Wüsten-Expedition für das Q1 Biologie-Schulprojekt zum Thema Ökosystem Wüste.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
