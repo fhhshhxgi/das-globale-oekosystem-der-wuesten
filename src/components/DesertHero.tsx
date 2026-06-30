@@ -318,7 +318,7 @@ export default function DesertHero({ isNight, onStartExpedition, isPresentationM
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-orange-500/20 bg-orange-950/30 backdrop-blur-md shadow-2xl">
               <Sparkles className="w-3.5 h-3.5 text-orange-400 animate-pulse" />
               <span className="text-[10px] font-mono tracking-[0.25em] text-orange-300 uppercase font-black">
-                WISSENSCHAFTS-VORTRAEGE
+                
               </span>
             </div>
 
