@@ -309,7 +309,7 @@ export default function Biozönose({ isNight: globalIsNight, isPresentationMode 
             <Sparkles className="w-3.5 h-3.5" />
             <span>Ökologische Nische & Lebensgemeinschaft</span>
           </div>
-          <h2 className="font-sans text-3xl md:text-5xl font-black tracking-tight uppercase text-white">
+          <h2 className="font-sans text-3xl md:text-5xl font-black tracking-tight uppercase text-white leading-normal py-1">
             3. Die Biozönose der Wüste
           </h2>
           <div className="h-1 w-24 bg-gradient-to-r from-emerald-500 to-amber-500 mx-auto rounded-full" />

@@ -134,18 +134,18 @@ export default function FoodWeb({ isNight, setIsNight, isPresentationMode }: Foo
   };
 
   const nodePositions: Record<string, { x: number; y: number; emoji: string; label: string }> = {
-    greifvogel: { x: 180, y: 55, emoji: '🦅', label: 'Bussard' },
-    fennek: { x: 620, y: 55, emoji: '🦊', label: 'Fennek' },
-    schlange: { x: 300, y: 145, emoji: '🐍', label: 'Hornviper' },
-    skorpion: { x: 500, y: 145, emoji: '🦂', label: 'Skorpion' },
-    dromedar: { x: 80, y: 240, emoji: '🐪', label: 'Dromedar' },
-    gazelle: { x: 220, y: 240, emoji: '🦌', label: 'Gazelle' },
-    wuestenrennmaus: { x: 375, y: 240, emoji: '🐹', label: 'Rennmaus' },
-    heuschrecke: { x: 535, y: 240, emoji: '🦗', label: 'Heuschrecke' },
-    kaefer: { x: 710, y: 240, emoji: '🪲', label: 'Käfer' },
-    akazie: { x: 260, y: 345, emoji: '🌳', label: 'Akazie' },
-    graeser: { x: 540, y: 345, emoji: '🌾', label: 'Gräser' },
-    destruenten: { x: 400, y: 435, emoji: '🍄', label: 'Zersetzer' },
+    greifvogel: { x: 220, y: 50, emoji: '🦅', label: 'Bussard' },
+    fennek: { x: 580, y: 50, emoji: '🦊', label: 'Fennek' },
+    schlange: { x: 300, y: 125, emoji: '🐍', label: 'Hornviper' },
+    skorpion: { x: 500, y: 125, emoji: '🦂', label: 'Skorpion' },
+    dromedar: { x: 80, y: 210, emoji: '🐪', label: 'Dromedar' },
+    gazelle: { x: 220, y: 280, emoji: '🦌', label: 'Gazelle' },
+    wuestenrennmaus: { x: 380, y: 210, emoji: '🐹', label: 'Rennmaus' },
+    heuschrecke: { x: 540, y: 280, emoji: '🦗', label: 'Heuschrecke' },
+    kaefer: { x: 700, y: 210, emoji: '🪲', label: 'Käfer' },
+    akazie: { x: 250, y: 350, emoji: '🌳', label: 'Akazie' },
+    graeser: { x: 550, y: 350, emoji: '🌾', label: 'Gräser' },
+    destruenten: { x: 400, y: 425, emoji: '🍄', label: 'Zersetzer' },
   };
 
   const foodLinks: { source: string; target: string; bend?: number }[] = [
@@ -242,11 +242,11 @@ export default function FoodWeb({ isNight, setIsNight, isPresentationMode }: Foo
           </p>
         </div>
 
-        {/* Dashboard grid layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        {/* Full-width Stacked Layout */}
+        <div className="flex flex-col gap-8 w-full">
           
-          {/* LEFT CANVS COLUMN (8 cols) */}
-          <div className="lg:col-span-8 flex flex-col justify-between space-y-4">
+          {/* TOP CANVAS COLUMN - Full width */}
+          <div className="w-full flex flex-col justify-between space-y-4">
             <div className="bg-slate-900/30 border border-white/5 rounded-3xl relative overflow-hidden flex-1 flex flex-col justify-between shadow-2xl p-6 md:p-8 backdrop-blur-xl">
               
               {/* Stars & atmospheric background gradient inside canvas */}
@@ -298,8 +298,8 @@ export default function FoodWeb({ isNight, setIsNight, isPresentationMode }: Foo
               </div>
 
               {/* Holographic Network SVG Canvas */}
-              <div className="relative w-full overflow-x-auto md:overflow-x-visible select-none flex-1 flex items-center justify-start md:justify-center min-h-[420px] pb-4 scrollbar-thin scrollbar-thumb-white/5">
-                <div className="relative w-full aspect-[800/480] min-w-[720px] md:min-w-0 max-w-3xl shrink-0">
+              <div className="relative w-full overflow-x-auto lg:overflow-x-visible select-none flex-1 flex items-center justify-start lg:justify-center min-h-[420px] pb-4 scrollbar-thin scrollbar-thumb-white/5">
+                <div className="relative w-full aspect-[800/480] min-w-[800px] lg:min-w-0 max-w-3xl shrink-0">
                   
                   {/* SVG Line Connections */}
                   <svg className="absolute inset-0 w-full h-full pointer-events-none z-10" viewBox="0 0 800 480" preserveAspectRatio="xMidYMid meet">
@@ -578,8 +578,8 @@ export default function FoodWeb({ isNight, setIsNight, isPresentationMode }: Foo
             </div>
           </div>
 
-          {/* RIGHT COLUMNS: BIOMASS PYRAMID & DOSSIER PANEL */}
-          <div className="lg:col-span-4 flex flex-col gap-6">
+          {/* BOTTOM COLUMNS: BIOMASS PYRAMID & DOSSIER PANEL - Side-by-side below the network */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
             
             {/* Specimen Dossier (Detaillierte Analyse) */}
             <AnimatePresence mode="wait">

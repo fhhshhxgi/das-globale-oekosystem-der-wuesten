@@ -213,7 +213,6 @@ export default function DesertHero({ isNight, onStartExpedition, isPresentationM
   // Calculate opacity/scale values dynamically using the interpolated 'smoothProgress'
   // Stage 1: Big Typography Title (progress 0.0 -> 0.35)
   const titleOpacity = Math.max(0, 1 - smoothProgress * 2.8);
-  const titleScale = 1 - smoothProgress * 0.12;
   const titleTranslateY = smoothProgress * -80;
 
   // Stage 2: Narrative Bento Card (progress 0.25 -> 0.72)
@@ -310,10 +309,10 @@ export default function DesertHero({ isNight, onStartExpedition, isPresentationM
           <div 
             style={{ 
               opacity: titleOpacity, 
-              transform: `scale(${titleScale}) translate3d(0, ${titleTranslateY}px, 0)`,
+              transform: `translateY(${titleTranslateY}px)`,
               pointerEvents: smoothProgress > 0.32 ? 'none' : 'auto'
             }}
-            className="absolute inset-0 flex flex-col items-center justify-center text-center space-y-6 max-w-4xl mx-auto transition-all duration-300 ease-out will-change-[transform,opacity]"
+            className="absolute inset-0 flex flex-col items-center justify-center text-center space-y-6 max-w-4xl mx-auto transition-all duration-300 ease-out"
           >
             {/* Small decorative tag */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-orange-500/20 bg-orange-950/30 backdrop-blur-md shadow-2xl">
@@ -325,7 +324,7 @@ export default function DesertHero({ isNight, onStartExpedition, isPresentationM
 
             <div className="space-y-4">
               {/* Responsive font sizes perfectly scaled for iPads and Desktops */}
-              <h1 className="text-6xl sm:text-8xl md:text-[11.5rem] font-black tracking-tight uppercase leading-[0.9] text-transparent bg-clip-text bg-gradient-to-b from-white via-slate-100 to-slate-400 drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)]">
+              <h1 className="text-6xl sm:text-8xl md:text-[11.5rem] font-black tracking-tight uppercase leading-[1.05] pt-12 pb-4 px-4 text-transparent bg-clip-text bg-gradient-to-b from-white via-slate-100 to-slate-400 drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)]">
                 WÜSTE
               </h1>
               <h2 className="text-[10px] sm:text-xs md:text-base font-bold tracking-[0.45em] text-orange-400 uppercase mt-2">
@@ -334,7 +333,7 @@ export default function DesertHero({ isNight, onStartExpedition, isPresentationM
             </div>
 
             <p className="max-w-xl mx-auto text-xs sm:text-sm md:text-base text-slate-300 font-light leading-relaxed tracking-wide px-4">
-              Erforsche die faszinierenden biologischen Anpassungen und Überlebensstrategien in den extremsten Trockenregionen unserer Erde.
+              Erforsche die biologischen Anpassungen und Überlebensstrategien in den extremen Trockenregionen unserer Erde.
             </p>
 
             {/* Scroll Indicator Prompt */}
@@ -354,10 +353,10 @@ export default function DesertHero({ isNight, onStartExpedition, isPresentationM
           <div 
             style={{ 
               opacity: narrativeOpacity,
-              transform: `translate3d(0, ${narrativeTranslateY}px, 0)`,
+              transform: `translateY(${narrativeTranslateY}px)`,
               pointerEvents: (smoothProgress < 0.22 || smoothProgress > 0.72) ? 'none' : 'auto'
             }}
-            className="absolute inset-x-4 max-w-4xl mx-auto bg-slate-950/75 border border-white/5 backdrop-blur-xl p-5 md:p-8 rounded-3xl shadow-2xl transition-all duration-300 ease-out will-change-[transform,opacity] grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6"
+            className="absolute inset-x-4 max-w-4xl mx-auto bg-slate-950/75 border border-white/5 backdrop-blur-xl p-5 md:p-8 rounded-3xl shadow-2xl transition-all duration-300 ease-out grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6"
           >
             <div className="md:col-span-3 pb-2 border-b border-white/5 flex items-center justify-between">
               <div className="flex items-center gap-2">
@@ -385,7 +384,7 @@ export default function DesertHero({ isNight, onStartExpedition, isPresentationM
               </div>
               <h3 className="font-sans font-black text-xs md:text-sm text-white uppercase tracking-wide">Karger Untergrund</h3>
               <p className="text-[11px] md:text-xs text-slate-400 leading-relaxed">
-                Ob feiner Sand, grober Kies oder nackter Fels: Der Boden ist extrem nährstoffarm und bietet Pflanzen kaum Halt.
+                Ob feiner Sand, grober Kies oder festes Felsgestein: Der Boden ist nährstoffarm und bietet Pflanzen kaum Halt.
               </p>
             </div>
 
@@ -394,9 +393,9 @@ export default function DesertHero({ isNight, onStartExpedition, isPresentationM
               <div className="w-7 h-7 md:w-8 md:h-8 rounded-lg bg-orange-500/10 text-orange-400 flex items-center justify-center font-mono font-bold text-xs border border-orange-500/20 group-hover:bg-orange-500 group-hover:text-black transition-all">
                 03
               </div>
-              <h3 className="font-sans font-black text-xs md:text-sm text-white uppercase tracking-wide">Überlebenskünstler</h3>
+              <h3 className="font-sans font-black text-xs md:text-sm text-white uppercase tracking-wide">Spezialisierte Organismen</h3>
               <p className="text-[11px] md:text-xs text-slate-400 leading-relaxed">
-                Trotz der lebensfeindlichen Umstände leben hier perfekt angepasste Pflanzen und Tiere in einem eingespielten Kreislauf.
+                Trotz der lebensfeindlichen Umstände leben hier angepasste Pflanzen und Tiere in einem ökologischen Kreislauf.
               </p>
             </div>
 
@@ -413,10 +412,10 @@ export default function DesertHero({ isNight, onStartExpedition, isPresentationM
           <div 
             style={{ 
               opacity: ctaOpacity,
-              transform: `translate3d(0, ${ctaTranslateY}px, 0)`,
+              transform: `translateY(${ctaTranslateY}px)`,
               pointerEvents: smoothProgress < 0.68 ? 'none' : 'auto'
             }}
-            className="absolute inset-x-4 max-w-4xl mx-auto flex flex-col items-center justify-center text-center space-y-6 md:space-y-8 transition-all duration-300 ease-out will-change-[transform,opacity]"
+            className="absolute inset-x-4 max-w-4xl mx-auto flex flex-col items-center justify-center text-center space-y-6 md:space-y-8 transition-all duration-300 ease-out"
           >
             <div className="space-y-3">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] md:text-xs font-mono font-bold uppercase tracking-widest bg-orange-500/10 text-orange-400 border border-orange-500/20 shadow-lg">
@@ -427,7 +426,7 @@ export default function DesertHero({ isNight, onStartExpedition, isPresentationM
                 Starte dein Wüstenabenteuer
               </h2>
               <p className="max-w-lg mx-auto text-[11px] sm:text-xs md:text-sm text-slate-300 px-4">
-                Erforsche abiotische Faktoren, wechsle zwischen Tag- und Nachtsimulation und entdecke die faszinierenden Überlebens-Anpassungen!
+                Erforsche abiotische Faktoren, wechsle zwischen Tag- und Nachtsimulation und entdecke die evolutionären Überlebens-Anpassungen!
               </p>
             </div>
 

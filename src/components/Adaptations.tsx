@@ -43,13 +43,13 @@ export default function Adaptations({ isNight, isPresentationMode }: Adaptations
         label: 'A',
         text: 'In der prallen Mittagssonne jagen gehen, um saftige Insekten zu erbeuten.',
         isCorrect: false,
-        explanation: 'Falsch! Auf dem offenen, brennenden Sandboden verlierst du innerhalb von Minuten extrem viel Körperwasser durch Schwitzen und Hecheln. Die Hitze führt unweigerlich zum Hitzschlag und Tod. Dies ist das Gegenteil einer überlebenssichernden Anpassung.'
+        explanation: 'Falsch! Auf dem offenen, erhitzten Sandboden verlierst du innerhalb von Minuten viel Körperwasser. Die extreme Hitze führt zu kritischer Dehydration. Dies gefährdet das Überleben.'
       },
       {
         label: 'B',
         text: 'Dich tief in deine kühle Erdhöhle zurückziehen, dösen und erst nach Sonnenuntergang jagen gehen.',
         isCorrect: true,
-        explanation: 'Richtig! Das ist eine hochwirksame verhaltensbezogene Anpassung. In deinem tiefen Bau liegt die Temperatur bei konstanten, angenehmen 25 °C. Durch die Deaktivierung deines Körpers sparst du wertvolles Wasser, schützt deine Fußsohlen und gehst der mörderischen Strahlung komplett aus dem Weg.'
+        explanation: 'Richtig! Das ist eine wirksame verhaltensbiologische Anpassung. In der unterirdischen Erdhöhle liegt die Temperatur bei konstanten, milden 25 °C. Durch diese Ruhephase sparst du Wasser, schützt deine Extremitäten und weichst der intensiven Sonneneinstrahlung aus.'
       },
       {
         label: 'C',
@@ -102,12 +102,12 @@ export default function Adaptations({ isNight, isPresentationMode }: Adaptations
             <Sparkles className="w-3 h-3 text-amber-400 animate-spin" />
             Evolution & Anpassung
           </div>
-          <h2 className="font-sans font-black text-3xl md:text-5xl tracking-tight uppercase text-white">
+          <h2 className="font-sans font-black text-3xl md:text-5xl tracking-tight uppercase text-white leading-normal py-1">
             6. Wie überlebt man in der Wüste?
           </h2>
           <div className="h-1 w-24 bg-gradient-to-r from-amber-500 to-orange-600 mx-auto rounded-full" />
           <p className="text-sm md:text-base text-slate-300 max-w-2xl mx-auto">
-            Die Natur ist der ultimative Ingenieur. Entdecke, wie Pflanzen und Tiere durch faszinierende evolutionäre Strategien der mörderischen Hitze trotzen.
+            Entdecke, wie sich Pflanzen und Tiere durch spezifische evolutionäre Mechanismen an die extremen Hitzebedingungen angepasst haben.
           </p>
         </div>
 
@@ -182,10 +182,6 @@ export default function Adaptations({ isNight, isPresentationMode }: Adaptations
                   </motion.div>
                 </AnimatePresence>
               </div>
-            </div>
-
-            <div className="p-3 bg-white/5 rounded-xl border border-white/5 text-center text-[10px] text-slate-400 font-mono">
-              Pro-Tipp: Klicke durch die Reiter, um die Anpassungstypen für den Unterricht zu vergleichen.
             </div>
 
           </div>

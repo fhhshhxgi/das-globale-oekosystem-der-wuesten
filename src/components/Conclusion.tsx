@@ -110,7 +110,7 @@ export default function Conclusion({ isNight, isPresentationMode }: ConclusionPr
                   <span className="font-sans font-black text-xs uppercase tracking-wider text-white">Evolution</span>
                 </div>
                 <p className="text-xs text-slate-300 leading-relaxed">
-                  Extremer Selektionsdruck formt geniale biologische Schutzstrategien und Anpassungen.
+                  Extremer Selektionsdruck führt zur Ausbildung spezifischer biologischer Schutzstrategien und Anpassungen.
                 </p>
               </div>
 
@@ -130,12 +130,6 @@ export default function Conclusion({ isNight, isPresentationMode }: ConclusionPr
 
           </div>
         </motion.div>
-
-        {/* School reference credits block */}
-        <div className="text-center opacity-40 space-y-1 text-xs font-mono text-slate-400">
-          <div>Präsentationsunterlage • Biologie Q1-Grundkurs / Leistungskurs</div>
-          <div>Thema: Ökologie extremer Lebensräume — Ökosystem Wüste</div>
-        </div>
 
       </div>
     </section>

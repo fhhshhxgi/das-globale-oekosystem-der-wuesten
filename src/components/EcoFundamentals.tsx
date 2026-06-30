@@ -107,7 +107,7 @@ export default function EcoFundamentals({ isNight }: EcoFundamentalsProps) {
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-mono font-bold uppercase tracking-widest bg-orange-500/10 text-orange-400 border border-orange-500/20">
             Kapitel 1
           </span>
-          <h2 className="font-sans text-2xl md:text-4xl font-black tracking-tight uppercase text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-slate-400">
+          <h2 className="font-sans text-2xl md:text-4xl font-black tracking-tight uppercase text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-slate-400 leading-normal py-1">
             Ökologische Grundlagen
           </h2>
           <div className="h-1 w-16 bg-orange-500 mx-auto rounded-full" />
@@ -195,14 +195,6 @@ export default function EcoFundamentals({ isNight }: EcoFundamentalsProps) {
           <div className="lg:col-span-8">
             <AnimatePresence mode="wait">
               {abioticFactors.filter(f => f.id === selectedFactor).map((factor) => {
-                const factorVideos: Record<string, string> = {
-                  water: "https://assets.mixkit.co/videos/preview/mixkit-camels-walking-in-the-desert-41567-large.mp4",
-                  temp: "https://assets.mixkit.co/videos/preview/mixkit-stars-in-the-night-sky-over-a-desert-41569-large.mp4",
-                  light: "https://assets.mixkit.co/videos/preview/mixkit-beautiful-desert-dunes-under-a-blue-sky-41566-large.mp4",
-                  soil: "/desert.mp4",
-                  wind: "https://assets.mixkit.co/videos/preview/mixkit-wind-blowing-on-desert-sand-41568-large.mp4"
-                };
-
                 return (
                   <motion.div
                     key={factor.id}
@@ -212,9 +204,9 @@ export default function EcoFundamentals({ isNight }: EcoFundamentalsProps) {
                     transition={{ duration: 0.25 }}
                     className="h-full p-5 md:p-6 rounded-2xl border border-slate-900 bg-slate-900/40"
                   >
-                    <div className="grid grid-cols-1 md:grid-cols-12 gap-5 items-stretch h-full">
+                    <div className="grid grid-cols-1 md:grid-cols-1 gap-5 items-stretch h-full">
                       {/* Left side: Text details */}
-                      <div className="md:col-span-7 flex flex-col justify-between space-y-4">
+                      <div className="md:col-span-1 flex flex-col justify-between space-y-4">
                         <div className="space-y-4">
                           {/* Title and value badge */}
                           <div className="flex items-center justify-between gap-3 flex-wrap">
@@ -263,31 +255,6 @@ export default function EcoFundamentals({ isNight }: EcoFundamentalsProps) {
                             {factor.survivalHack}
                           </p>
                         </div>
-                      </div>
-
-                      {/* Right side: Live video frame */}
-                      <div className="md:col-span-5 relative rounded-xl overflow-hidden border border-slate-900/60 bg-slate-950 min-h-[150px] md:min-h-full flex items-center justify-center">
-                        <video
-                          key={factor.id}
-                          autoPlay={true}
-                          loop={true}
-                          muted={true}
-                          playsInline={true}
-                          onLoadedMetadata={(e) => {
-                            const video = e.currentTarget;
-                            video.muted = true;
-                            video.play().catch((err) => {
-                              console.warn("Factor video autoplay blocked:", err);
-                            });
-                          }}
-                          className="absolute inset-0 w-full h-full object-cover opacity-50 hover:opacity-75 transition-opacity duration-500"
-                        >
-                          <source src={factorVideos[factor.id]} type="video/mp4" />
-                        </video>
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent pointer-events-none" />
-                        <span className="absolute bottom-2 left-2 px-1.5 py-0.5 rounded text-[8px] font-mono bg-slate-950 border border-white/5 text-slate-400 uppercase tracking-wider z-10">
-                          Video-Sonde • {factor.title}
-                        </span>
                       </div>
                     </div>
                   </motion.div>

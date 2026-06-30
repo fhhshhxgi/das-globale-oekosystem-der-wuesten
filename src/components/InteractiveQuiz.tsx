@@ -64,7 +64,7 @@ export default function InteractiveQuiz({ isNight, isPresentationMode }: Interac
       id: 5,
       question: 'Warum sind viele Wüstentiere nachtaktiv?',
       options: [
-        'Weil sie der brutalen Tageshitze entgehen und somit Wasser sparen.',
+        'Weil sie der extremen Tageshitze entgehen und somit Wasser sparen.',
         'Weil sie nachts keine Beutegreifer fürchten müssen.',
         'Weil es nachts künstliche Lichtquellen gibt.'
       ],
@@ -191,7 +191,7 @@ export default function InteractiveQuiz({ isNight, isPresentationMode }: Interac
           </h2>
           <div className="h-1 w-24 bg-gradient-to-r from-orange-500 to-yellow-500 mx-auto rounded-full" />
           <p className="text-sm md:text-base text-slate-300">
-            Teste dein Wissen über das Ökosystem Wüste. Ideal, um Mitschüler aktiv in den Vortrag einzubinden!
+            Teste dein Wissen über das Ökosystem Wüste.
           </p>
         </div>
 

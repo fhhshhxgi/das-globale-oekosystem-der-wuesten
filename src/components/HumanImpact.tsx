@@ -21,7 +21,7 @@ export default function HumanImpact({ isNight, isPresentationMode }: HumanImpact
     { title: 'Biodiversitätsverlust', text: 'Stark spezialisierte Tier- und Pflanzenarten sterben lokal aus, weil ihre engen Nischen unwiederbringlich zerstört werden.' },
     { title: 'Erosion & Nährstoffarmut', text: 'Wind trägt den fruchtbaren Oberboden ab. Die Remineralisierung bricht zusammen, da auch die Destruenten schwinden.' },
     { title: 'Nahrungsnetz-Kollaps', text: 'Fallen Produzenten weg, verhungern Herbivoren (Dromedare/Gazellen). Das entzieht Sekundärkonsumenten die Basis.' },
-    { title: 'Grundwasser-Absenkung', text: 'Oasen trocknen biologisch aus. Der Salzgehalt im Restwasser steigt mörderisch an und vergiftet Nutzpflanzen.' }
+    { title: 'Grundwasser-Absenkung', text: 'Oasen trocknen biologisch aus. Der Salzgehalt im verbleibenden Wasser steigt stark an und schädigt Nutzpflanzen.' }
   ];
 
   const sustainabilitySolutions = [
@@ -83,8 +83,8 @@ export default function HumanImpact({ isNight, isPresentationMode }: HumanImpact
                 isPresentationMode ? 'font-medium' : ''
               }`}>
                 {oasisState === 'healthy' 
-                  ? 'Im intakten Zustand gedeiht die Oase als üppige Lebensader. Das harmonische Miteinander aus reinem Wasser, dichter Vegetation und schattenspendenden Baumkronen schützt das Mikroklima. Biodiversität und Vitalität erreichen ein absolutes Maximum.'
-                  : 'Exzessive Abpumpung fossiler Grundwasservorkommen und ungebremste Überweidung lassen das fragile Gefüge kollabieren. Der Wasserspiegel sinkt unaufhaltsam ab, nackter Boden erodiert, und die spezialisierte Flora verdorrt.'
+                  ? 'Im intakten Zustand fungiert die Oase als wichtiges Feuchtgebiet. Das Zusammenwirken von Wasser, dichter Vegetation und schattenspendenden Baumkronen reguliert das Mikroklima. Die lokale Biodiversität erreicht ein stabiles Maximum.'
+                  : 'Exzessive Entnahme fossiler Grundwasservorkommen und Überweidung schädigen das Ökosystem. Der Grundwasserspiegel sinkt ab, der unbewachsene Boden erodiert, und die spezialisierte Flora stirbt ab.'
                 }
               </p>
 

@@ -54,7 +54,7 @@ export default function InteractiveMap({ isPresentationMode }: InteractiveMapPro
       id: 'stone_desert',
       title: 'Die Steinwüste (Hammada)',
       shortDesc: 'Extrem heißer Fels- und Geröllboden ohne Schatten.',
-      fullDesc: 'Über 70% der Sahara bestehen aus dieser kargen Steinwüste. Das nackte Felsgestein saugt tagsüber die Sonnenwärme auf und heizt sich auf über 70°C auf. Nachts strahlt diese Wärme schlagartig ab, wodurch es eisig kalt wird. Pflanzen und Tiere müssen sich in Felsspalten flüchten, um diese enormen Temperaturschwankungen zu überleben.',
+      fullDesc: 'Über 70% der Sahara bestehen aus dieser kargen Steinwüste. Das freiliegende Felsgestein absorbiert tagsüber die Sonnenstrahlung und erwärmt sich auf über 70°C. Nachts wird diese Wärme wieder abgegeben, wodurch die Temperaturen stark sinken. Pflanzen und Tiere weichen in Felsspalten aus, um diese Temperaturschwankungen zu überstehen.',
       x: 75,
       y: 25,
       icon: 'Landmark'
@@ -568,7 +568,7 @@ export default function InteractiveMap({ isPresentationMode }: InteractiveMapPro
           <div className="flex justify-center pt-2">
             <div className="inline-flex items-center gap-2.5 px-5 py-3.5 rounded-2xl text-xs font-mono text-slate-200 bg-orange-500/10 border border-orange-500/35 max-w-2xl text-center leading-relaxed shadow-lg shadow-orange-500/5">
               <span className="text-orange-400 animate-pulse font-black">🗺️ SCHNELLANLEITUNG:</span>
-              <span>Klicke direkt auf die <b>rotierenden Ringe in der 3D-Platte</b> oder wähle einen der <b>Lebensräume unten</b> aus, um spannende Infos und Regler freizuschalten!</span>
+              <span>Klicke direkt auf die <b>Markierungen in der 3D-Platte</b> oder wähle einen der <b>Lebensräume unten</b> aus, um zusätzliche Informationen und Parametersteuerungen freizuschalten.</span>
             </div>
           </div>
         </div>
@@ -1144,8 +1144,8 @@ export default function InteractiveMap({ isPresentationMode }: InteractiveMapPro
                                 <Flame className="w-5 h-5 shrink-0 mt-0.5" />
                                 <p>
                                   {solarIntensity > 8 
-                                    ? '🔥 EXTREME HITZE: Der nackte Fels erhitzt sich enorm. Echsen und Insekten müssen sofort tief in kühle Gesteinsspalten flüchten, um nicht zu überhitzen.' 
-                                    : '🌤️ OPTIMALE WÄRME: Die Sonnenstrahlung ist moderat. Wechselwarme Echsen nutzen die angenehm warmen Steine, um Energie zu tanken.'}
+                                    ? '🔥 EXTREME HITZE: Das Felsgestein erhitzt sich stark. Reptilien und Insekten weichen in kühle Gesteinsspalten aus, um einer Überhitzung zu entgehen.' 
+                                    : '🌤️ OPTIMALE WÄRME: Die Sonnenstrahlung ist moderat. Wechselwarme Echsen nutzen die erwärmten Steine, um Energie zu tanken.'}
                                 </p>
                               </div>
                             </div>
